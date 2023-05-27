@@ -5,6 +5,19 @@ import { type Session } from "next-auth";
 import { getServerAuthSession } from "../common/get-server-auth-session";
 import { prisma } from "../db/client";
 
+/*
+  * Contextは、繰り返し使いたい値が出てきた時に使用する
+  * 例えば、ユーザーの認証情報など
+  export const createContext = () => {
+    return {
+      * 共通化したいデータを記述する
+      someMetaInfo: 123 as const,
+    }
+  }
+
+  const t = initTRPC.context<typeof createContext>().create() t.procedure.query(({ ctx }) => { ctx.someMetaInfo が推論される })
+*/
+
 type CreateContextOptions = {
   session: Session | null;
 };

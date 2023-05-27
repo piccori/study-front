@@ -3,6 +3,11 @@ import superjson from "superjson";
 import { ZodError } from "zod";
 import { type Context } from "./context";
 
+/*
+  * tRPCを使用するための初期設定
+  * 1. tオブジェクトは、主にルーター、ミドルウェア、プロシージャーを定義するために使用
+*/
+
 const t = initTRPC.context<Context>().create({
   transformer: superjson,
   errorFormatter({ shape, error }) {
