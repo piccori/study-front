@@ -250,26 +250,26 @@
     use-sync-external-store "^1.2.0"
 
 "@trpc/client@^10.0.0":
-  version "10.28.0"
-  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.28.0.tgz#fb474107b480e3446eb9ff39104d30cbf31048b4"
-  integrity sha512-Xhl2xdGI4PkI/a8xaTbsdpIXOy7PeOZaBBdvBgs2kpKiznNAI10qPrK+GLIDkSxvekLqDSnVYIhS0kU0FkhEXw==
+  version "10.33.0"
+  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.33.0.tgz#621df1a1d3a07c6532531b20fbee5198c440720a"
+  integrity sha512-gHKe/5MEdoi1HEF7gsviFdHC7IyVRYjS39C0uXYHlM9rJ9It+KQpz8+wu9XkORte/lbBCScOGOPLNqb5IvSF/g==
 
 "@trpc/next@^10.0.0":
-  version "10.28.0"
-  resolved "https://registry.yarnpkg.com/@trpc/next/-/next-10.28.0.tgz#d848b2a4ae708d6ce1993549323b07b91452b575"
-  integrity sha512-sD98gQu/vZhXhC4hEPqyQStWhUIgZCWQuE4N//eZodAtb8Lyosg/UUs/Mo6IFAcdjcXKuyMYlu27ZIRjaG3txw==
+  version "10.33.0"
+  resolved "https://registry.yarnpkg.com/@trpc/next/-/next-10.33.0.tgz#ee6ea6efdc7dfc2b081902997474e6d9d47354b2"
+  integrity sha512-x2aRwGbXd+8Yk3WxVGF5IDWu9f/m2Na68FTU7df8WoJ4Il8T79Blr3i2CrpGrLZ25KyAJ34Mpqtaxwb1dUct0g==
   dependencies:
     react-ssr-prepass "^1.5.0"
 
 "@trpc/react-query@^10.0.0":
-  version "10.28.0"
-  resolved "https://registry.yarnpkg.com/@trpc/react-query/-/react-query-10.28.0.tgz#349b1d8f28b6bf10ead51b9902175f5e176b9652"
-  integrity sha512-ssXaZbtNHrgvUW/bmwpiEttF1t1TMZAp/FQ98puXE7MqpodEi2aIum1Ou9Cb1w0lEc4mPwOwztzwuUSGsdCD6Q==
+  version "10.33.0"
+  resolved "https://registry.yarnpkg.com/@trpc/react-query/-/react-query-10.33.0.tgz#7c80cf0ab6fd1cf68b36cb3c8bf7fe367de81033"
+  integrity sha512-SPqw7aJxiYIx4hhaNIGl2fQvQeiz0eo3QpWm0oYyE5f24+TBfyK+jrDGMQt+020cuPb+QNfrxCJFGsXYT0410w==
 
 "@trpc/server@^10.0.0":
-  version "10.28.0"
-  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.28.0.tgz#9c70d56dbe20b7726cf752006f815b2f7177c95e"
-  integrity sha512-PrJ/VgRuujMCtNkgrldCPbqv3+yk1LKweKEfvQHTN2L0WIaKJPXzSsOTJS9PqNpFOTqzaK5mgDbypIFvq7SYow==
+  version "10.33.0"
+  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.33.0.tgz#d07c479a68a51d059d3c7978a4503829b8f2b388"
+  integrity sha512-3EN7hiYFy1FsMqGIHEkRqtjxLhTRc/E73mdE+F/vqJWNwigM8UmAvZgFC0YTw87PYpztYzA1vxxK7LQfhXHeog==
 
 "@types/json-schema@^7.0.9":
   version "7.0.12"
@@ -282,9 +282,9 @@
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
 "@types/node@^18.0.0":
-  version "18.16.16"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.16.tgz#3b64862856c7874ccf7439e6bab872d245c86d8e"
-  integrity sha512-NpaM49IGQQAUlBhHMF82QH80J08os4ZmyF9MkpCzWAGuOHqE4gTEbhzd7L3l5LmWuZ6E0OiC1FweQ4tsiW35+g==
+  version "18.16.18"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.18.tgz#85da09bafb66d4bc14f7c899185336d0c1736390"
+  integrity sha512-/aNaQZD0+iSBAGnvvN2Cx92HqE5sZCPZtx2TsK+4nvV23fFe09jVDvpArXr2j9DnYlzuU9WuoykDDc6wqvpNcw==
 
 "@types/prop-types@*":
   version "15.7.5"
@@ -292,9 +292,9 @@
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
 
 "@types/react-dom@^18.0.5":
-  version "18.2.4"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.4.tgz#13f25bfbf4e404d26f62ac6e406591451acba9e0"
-  integrity sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw==
+  version "18.2.6"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.6.tgz#ad621fa71a8db29af7c31b41b2ea3d8a6f4144d1"
+  integrity sha512-2et4PDvg6PVCyS7fuTc4gPoksV58bW0RwSxWKcPRcHZf0PRUGq03TKcD/rUHe3azfV6/5/biUBJw+HhCQjaP0A==
   dependencies:
     "@types/react" "*"
 
