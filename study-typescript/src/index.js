@@ -34,71 +34,64 @@
    * VehicleとTruckのインスタンスを作成し、新たに追加したメソッドを利用してメソッドチェーンで複数の設定を行い、
    * 最後にgetInfo()メソッドを使用して詳細情報をログに出力してください。
  */
-
-// 属性の型定義
-type Make = string;
-type Model = string;
-type Year = number;
-type VehicleColor = string;
-type Owner = string;
-
-class Vehicle {
-  private color?: VehicleColor;
-  private owner?: Owner;
-
-  // コンストラクタ: 全ての属性を引数として受け取り、インスタンスに設定する。
-  constructor(
-    private make: Make,
-    private model: Model,
-    private year: Year,
-  ) {}
-
-  // getInfo(): 車両の詳細情報（メーカー、モデル、製造年, 色, Owner）を文字列で返す。
-  getInfo(): string {
-    return `メーカー: ${this.make}, モデル: ${this.model}, 製造年: ${this.year}` +
-    (this.color ? `, 色: ${this.color}` : '') +
-    (this.owner ? `, 所有者: ${this.owner}` : '');
-  }
-
-  // メソッドチェーンをサポートするためのメソッドを追加
-  setColor(color: VehicleColor): this {
-    this.color = color;
-    return this;
-  }
-
-  setOwner(owner: Owner): this {
-    this.owner = owner;
-    return this;
-  }
-}
-
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var Vehicle = /** @class */ (function () {
+    // コンストラクタ: 全ての属性を引数として受け取り、インスタンスに設定する。
+    function Vehicle(make, model, year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+    // getInfo(): 車両の詳細情報（メーカー、モデル、製造年, 色, Owner）を文字列で返す。
+    Vehicle.prototype.getInfo = function () {
+        return "\u30E1\u30FC\u30AB\u30FC: ".concat(this.make, ", \u30E2\u30C7\u30EB: ").concat(this.model, ", \u88FD\u9020\u5E74: ").concat(this.year) +
+            (this.color ? ", \u8272: ".concat(this.color) : '') +
+            (this.owner ? ", \u6240\u6709\u8005: ".concat(this.owner) : '');
+    };
+    // メソッドチェーンをサポートするためのメソッドを追加
+    Vehicle.prototype.setColor = function (color) {
+        this.color = color;
+        return this;
+    };
+    Vehicle.prototype.setOwner = function (owner) {
+        this.owner = owner;
+        return this;
+    };
+    return Vehicle;
+}());
 // トラック(Truck)クラスの作成
-class Truck extends Vehicle {
-  // 追加属性: payload (積載量): 数値（キログラム単位）
-  private payload?: number;
-  constructor(
-    make: Make,
-    model: Model,
-    year: Year,
-  ) {
-    super(make, model, year);
-  }
-
-  // getInfo(): VehicleのgetInfo()メソッドをオーバーライドし、積載量も含めた車両の詳細情報を文字列で返す。
-  getInfo(): string {
-    return `${super.getInfo()}, 積載量: ${this.payload}kg`;
-  }
-
-  // メソッドチェーンをサポート
-  setPayload(payload: number): this {
-    this.payload = payload;
-    return this;
-  }
-}
-
+var Truck = /** @class */ (function (_super) {
+    __extends(Truck, _super);
+    function Truck(make, model, year) {
+        return _super.call(this, make, model, year) || this;
+    }
+    // getInfo(): VehicleのgetInfo()メソッドをオーバーライドし、積載量も含めた車両の詳細情報を文字列で返す。
+    Truck.prototype.getInfo = function () {
+        return "".concat(_super.prototype.getInfo.call(this), ", \u7A4D\u8F09\u91CF: ").concat(this.payload, "kg");
+    };
+    // メソッドチェーンをサポート
+    Truck.prototype.setPayload = function (payload) {
+        this.payload = payload;
+        return this;
+    };
+    return Truck;
+}(Vehicle));
 // VehicleとTruckのインスタンスをそれぞれ作成し、getInfo()メソッドを使用して詳細情報をログに出力してください。
-const vehicle = new Vehicle('Toyota', 'Prius', 2020).setColor('Red').setOwner('John');
+var vehicle = new Vehicle('Toyota', 'Prius', 2020).setColor('Red').setOwner('John');
 console.log(vehicle.getInfo()); // メーカー: Toyota, モデル: Prius, 製造年: 2020
-
-const truck = new Truck('Isuzu', 'Giga', 2018).setColor('Blue').setOwner('Mike').setPayload(5000);
+var truck = new Truck('Isuzu', 'Giga', 2018).setColor('Blue').setOwner('Mike').setPayload(5000);
 console.log(truck.getInfo()); // メーカー: Isuzu, モデル: Giga, 製造年: 2018, 色: Blue, Owner: Mike, 積載量: 5000kg
