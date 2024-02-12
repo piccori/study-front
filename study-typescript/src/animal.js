@@ -1,3 +1,4 @@
+"use strict";
 /**
  * 問題: 動物と猫の行動管理システム
  * 要件:
@@ -20,22 +21,21 @@
   1. 上記の要件に従って、AnimalとFelineインターフェース、およびCatクラスを定義してください。
   2. Catクラスのインスタンスを作成し、それがAnimalとFelineの行動を正しく実行できることをデモするコードを書いてください。
  */
-var Cat = /** @class */ (function () {
-    function Cat(name) {
+class Cat {
+    constructor(name) {
         this.name = name;
     }
-    Cat.prototype.eat = function (food) {
-        return "".concat(this.name, " ate some ").concat(food, ".");
-    };
-    Cat.prototype.sleep = function (hours) {
-        return "".concat(this.name, " slept for ").concat(hours, " hours.");
-    };
-    Cat.prototype.meow = function () {
-        return "".concat(this.name, " says Meow!!!!");
-    };
-    return Cat;
-}());
-var whiskers = new Cat("Whiskers");
+    eat(food) {
+        return `${this.name} ate some ${food}.`;
+    }
+    sleep(hours) {
+        return `${this.name} slept for ${hours} hours.`;
+    }
+    meow() {
+        return `${this.name} says Meow!!!!`;
+    }
+}
+const whiskers = new Cat("Whiskers");
 console.log(whiskers.eat('fish'));
 console.log(whiskers.sleep('8'));
 console.log(whiskers.meow());

@@ -1,3 +1,4 @@
+"use strict";
 /**
  * 食品情報管理システム
  * 要件:
@@ -21,21 +22,21 @@
   - TypeScriptではインターフェースを直接インスタンス化できないため、オブジェクトリテラルを使用して具体的な食品の例を作成します。
  */
 // Sushiインスタンスの作成
-var sushi = {
+const sushi = {
     calories: 300,
     tasty: true,
     salty: true,
 };
 // Cakeインスタンスの作成
-var cake = {
+const cake = {
     calories: 400,
     tasty: true,
     sweet: true,
 };
 // コンソールに出力する関数の実装
 function printFoodInfo(food) {
-    console.log("Calories: ".concat(food.calories));
-    console.log("Tasty: ".concat(food.tasty));
+    console.log(`Calories: ${food.calories}`);
+    console.log(`Tasty: ${food.tasty}`);
 }
 printFoodInfo(sushi);
 printFoodInfo(cake);
